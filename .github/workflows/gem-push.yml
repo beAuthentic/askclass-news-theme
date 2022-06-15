@@ -20,5 +20,3 @@ jobs:
           token: ${{ secrets.RUBYGEMS_TOKEN }}
 
       - uses: fac/ruby-gem-push-action@v2
-        with:
-          key: GitHub-Action
