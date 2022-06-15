@@ -23,7 +23,7 @@ jobs:
           $(grep 'spec.name' askclass-news-theme.gemspec | cut -d'"' -f2)
 
       - name: Build
-      - run: gem build ${{ steps.version.outputs.NAME }}.gemspec
+        run: gem build ${{ steps.version.outputs.NAME }}.gemspec
 
       - uses: fac/ruby-gem-setup-credentials-action@v2
         with:
