@@ -1,0 +1,64 @@
+$c1: #005F73;
+$c2: #03989E;
+$c3: #CA6702;
+$c4: #EE9B00;
+$c5: #355691;
+$c6: #4073A0;
+$c7: #3C5A14;
+$c8: #598B2C;
+$c9: #9B2226;
+$c10: #B18FCF;
+
+@mixin paint($color) {
+  background-image: linear-gradient(225deg, $color 50%, transparent 50%);
+  border-top-color: $color;
+  .control {
+    .button {
+      background-color: $color;
+    }
+    a {
+      color: $color;
+    }
+  }
+  .body {
+    h3 {
+      color: $color;
+    }
+  }
+  &.current {
+    .control {
+      background-color: $color;
+    }
+  }
+}
+
+.c1 {
+  @include paint($c1);
+}
+.c2 {
+  @include paint($c2);
+}
+.c3 {
+  @include paint($c3);
+}
+.c4 {
+  @include paint($c4);
+}
+.c5 {
+  @include paint($c5);
+}
+.c6 {
+  @include paint($c6);
+}
+.c7 {
+  @include paint($c7);
+}
+.c8 {
+  @include paint($c8);
+}
+.c9 {
+  @include paint($c9);
+}
+.c10 {
+  @include paint($c10);
+}

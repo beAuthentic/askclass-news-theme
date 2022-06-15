@@ -1,0 +1,24 @@
+{% assign writer = page.id | remove_first: ".html" | split: "/" | slice: -1 | join: '' %}
+{% for cat in site.categories %}
+  {% assign w = cat[0] | downcase %}
+  {% if writer == w %}
+    {% assign posts = cat[1] %}
+    {% assign author = cat[0] | replace: "_", " " %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<!doctype html>
+<html lang="en">
+  {% include header.html %}
+  <body>
+    {% include logo.html image=site.logo.alt_image size=site.logo.alt_size title=author %}
+
+    {% if posts.size and author %}
+      {% include grid.html posts=posts %}
+    {% endif %}
+
+    {% include footer.html %}
+  </body>
+</html>
+

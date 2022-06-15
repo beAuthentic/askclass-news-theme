@@ -1,0 +1,17 @@
+ol > li > ul > li {
+  list-style-type: disclosure-closed;
+}
+ol > li > ol > li {
+  list-style: lower-alpha;
+}
+ul > li > ul {
+  list-style: none;
+  li::before {
+    content: "\2022";
+    color: var(--secondaryColor);
+    font-weight: bold;
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+}

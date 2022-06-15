@@ -1,0 +1,10 @@
+<footer>
+  <ul>
+    {% for item in site.footer %}
+    <li>
+      <span class="material-icons">{{ item.icon }}</span>
+      <a href="{{ item.href }}">{{ item.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</footer>

@@ -1,0 +1,49 @@
+# Custom fields
+title: "AskClass News"
+description: "News and discussions on learning and education"
+site_url: "https://news.askclass.com"
+site_cat:
+  - education
+twitter: "askclass_com"
+logo:
+  image: "logo-icon.svg"
+  size: 70
+  alt_image: "logo.svg"
+  alt_size: 200
+color:
+  theme: "#ffc100"
+  bg: "#222"
+
+footer:
+  - icon: "copyright"
+    href: "https://askclass.com"
+    text: "AskClass"
+  - icon: "toys"
+    href: "https://app.askclass.com"
+    text: "Icebreakers"
+
+font_families:
+  - Teko
+  - Open+Sans
+  - Josefin+Sans
+  - Share+Tech+Mono
+  - Material+Icons
+
+# Theme
+excerpt_separator: "<!--more-->"
+
+sass:
+  style: compact
+
+collections_dir: content
+collections:
+  writers:
+    output: true
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Gemfile
+  - askclass-news-theme.gemspec
+  - CNAME
+

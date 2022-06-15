@@ -1,0 +1,18 @@
+{% assign p = page[include.p] %}
+{% if p %}
+<div class="paginator">
+  {% if include.p == 'next' %}
+    {% assign align = 'pull-left' %}
+    {% assign arrow = 'before' %}
+  {% else %}
+    {% assign align = 'pull-right' %}
+    {% assign arrow = 'next' %}
+  {% endif %}
+  <div class="{{ align }}">
+    <span>{{ include.p | capitalize }}</span>
+    <span class="material-icons">navigate_{{ arrow }}</span>
+  </div>
+  <img src="{{ p.image }}" width="100%" alt="{{ p.title }}" />
+  <a href="{{ p.url }}">{{ p.title }}</a>
+</div>
+{% endif %}

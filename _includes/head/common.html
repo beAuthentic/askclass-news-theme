@@ -1,0 +1,40 @@
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <meta name="application-name" content="{{ site.title }}" />
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <meta name="theme-color" content="{{ site.color.theme }}" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="{{ site.color.theme }}" />
+
+  <meta property="og:site_name" content="{{ site.title }}" />
+  {% if site.twitter %}
+  <meta name="twitter:site" content="{{ site.twitter }}" />
+  <meta name="twitter:card" content="summary_large_image">
+  {% endif % %}
+
+  <link rel="manifest" href="/manifest.json" />
+  {% assign families = site.font_families | join: "&family=" %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{ families }}&display=swap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg" />
+
+  <link rel="apple-touch-icon" href="/assets/logo-300.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="/assets/logo-48.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/assets/logo-96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/logo-144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo-192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo-512.png" />
+
+  <script type="module">
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
+  </script>

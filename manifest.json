@@ -1,0 +1,57 @@
+---
+---
+{
+  "background_color": "{{ site.color.bg }}",
+  "theme_color": "{{ site.color.theme }}",
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.title }}",
+  "categories": [ "{{ site.site_cat | join: '","' }}" ],
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "description": "{{ site.description }}",
+  "orientation": "portrait-primary",
+  "dir": "auto",
+  "icons": [
+    {
+      "src": "assets/logo-300.png",
+      "type": "image/png",
+      "sizes": "300x300"
+    },
+    {
+      "src": "assets/logo-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/logo-icon.svg",
+      "type": "image/png",
+      "sizes": "any"
+    }
+  ]
+}

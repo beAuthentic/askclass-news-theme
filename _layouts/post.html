@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  {% include header.html %}
+  <body>
+    {% include logo.html %}
+
+    <section class="center-align">
+      <article>
+        <header>
+          {% if page.image %}
+          <img width="100%" src="{{ page.image }}" alt="{{ page.source }}" />
+          {% endif %}
+
+          <h1>{{ page.title }}</h1>
+          <small>{{ page.date | date: "%b %m, %Y" }}</small>
+          {% if page.writer %}
+            <h5>{{ page.writer }}</h5>
+          {% elsif page.category %}
+            <h5><a href="/writers/{{ page.category | downcase }}">
+              {{ page.category | replace: "_", " " }}
+            </a></h5>
+          {% else %}
+            <h5>Ghost Writer</h5>
+          {% endif %}
+        </header>
+
+        <div class="text">{{ page.content }}</div>
+
+        {% if page.tags %}
+        <div class="spacer tags">
+          {% for tag in page.tags %}
+            <small>{{ tag }}</small>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.source and page.source_url %}
+        <div class="middle-align source">
+          <span class="material-icons">source</span>
+          <div>
+            Source:
+            <a target="_blank" href="{{ page.source_url }}">{{ page.source }}</a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+
+    {% include post/paginator.html %}
+    {% include footer.html %}
+  </body>
+</html>

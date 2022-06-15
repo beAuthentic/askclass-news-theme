@@ -1,0 +1,23 @@
+$width: 180px;
+$height: 450px;
+
+ul.grid {
+  list-style-type: none;
+  padding-inline-start: unset;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+
+  li {
+    position: relative;
+    text-align: center;
+    .disabled {
+      opacity: .7;
+    }
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    max-height: $height;
+  }
+}

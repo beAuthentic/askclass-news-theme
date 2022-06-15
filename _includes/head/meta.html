@@ -1,0 +1,24 @@
+{% if page.title %}
+  <title>{{ site.title }}: {{ page.title }}</title>
+  {% assign desc = page.excerpt | strip_html | strip_newlines %}
+  <meta name="description" content="{{ desc }}" />
+  <meta property="og:description" content="{{ desc }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:article:author" content="{{ page.writer }}" />
+  <meta property="og:article:published" content="{{ page.date }}" />
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image }}" />
+  {% endif %}
+{% elsif site.title %}
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:image" content="/assets/logo-square-300.png" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:type" content="website" />
+{% endif %}
