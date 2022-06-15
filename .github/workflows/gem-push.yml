@@ -12,7 +12,8 @@ jobs:
         with:
          bundler-cache: true
 
-      - run: bundle exec rake build
+      #- run: bundle exec rake build
+      - run: gem build askclass-news-theme.gemspec
 
       - uses: fac/ruby-gem-setup-credentials-action@v2
         with:
