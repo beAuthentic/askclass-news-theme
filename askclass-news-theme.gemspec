@@ -10,5 +10,6 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|content|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 
+  spec.metadata['allowed_push_host'] = "https://rubygems.org"
   spec.add_runtime_dependency "jekyll", "~> 4.2"
 end
