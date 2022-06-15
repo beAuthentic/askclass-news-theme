@@ -14,16 +14,14 @@ jobs:
 
       - name: Get Version
         id: version
-        run: echo ::set-output name=VER::\
-          $(grep 'spec.version' askclass-news-theme.gemspec | cut -d'"' -f2)
+        run: echo ::set-output name=VER::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
 
       - name: Get Package Name
         id: name
-        run: echo ::set-output name=NAME::\
-          $(grep 'spec.name' askclass-news-theme.gemspec | cut -d'"' -f2)
+        run: echo ::set-output name=NAME::$(grep 'spec.name' *.gemspec | cut -d'"' -f2)
 
       - name: Build
-        run: gem build ${{ steps.version.outputs.NAME }}.gemspec
+        run: gem build ${{ steps.name.outputs.NAME }}.gemspec
 
       - uses: fac/ruby-gem-setup-credentials-action@v2
         with:
@@ -31,4 +29,4 @@ jobs:
           key: rubygems
 
       - run:
-          gem push --key=rubygems ${{ steps.version.outputs.NAME }}-${{ steps.version.outputs.VER }}.gem
+          gem push --key=rubygems ${{ steps.name.outputs.NAME }}-${{ steps.version.outputs.VER }}.gem
