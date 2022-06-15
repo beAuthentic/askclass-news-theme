@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Simple responsive Jekyll theme featuring posts and authors."
   spec.homepage      = "https://news.askclass.com"
-  spec.license       = "MIT"
+  spec.license       = "MPL-2.0"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|content|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 
