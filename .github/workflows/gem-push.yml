@@ -23,10 +23,10 @@ jobs:
       - name: Build
         run: gem build ${{ steps.name.outputs.NAME }}.gemspec
 
-      - uses: fac/ruby-gem-setup-credentials-action@v2
-        with:
-          token: ${{ secrets.RUBYGEMS_TOKEN }}
-          key: rubygems
-
-      - run:
+      - name: Credentials & Push
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:rubygems: ${{ secrets.RUBYGEMS_TOKEN }}\n" > $HOME/.gem/credentials
           gem push --key=rubygems ${{ steps.name.outputs.NAME }}-${{ steps.version.outputs.VER }}.gem
