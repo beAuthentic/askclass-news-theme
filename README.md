@@ -27,7 +27,7 @@ $ bundle
 Customizable fields in the `_config.yaml`:
 
 Field | Description
---- | :---
+:--- | :---
 `title` | Name of the site
 `description` | Describe the site
 `site_url` | For meta field
