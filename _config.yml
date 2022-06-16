@@ -22,6 +22,14 @@ acn:
     size: 70
     alt_image: "logo.svg"
     alt_size: 200
+    sizes: [ 48, 96, 144, 192, 300, 512 ]
+  meta:
+    apple_icon: "logo-300.png"
+    og_image: "logo-square-300.png"
+    shortcut:
+      favicon: "favicon.ico"
+      type: "image/png"
+      image: "logo-96.png"
   footer:
     - icon: "copyright"
       href: "https://askclass.com"
@@ -50,8 +58,9 @@ sass:
 
 exclude:
   - README.md
-  - LICENSE.txt
+  - LICENSE
   - Gemfile
   - askclass-news-theme.gemspec
   - CNAME
+  - runme.sh
 
