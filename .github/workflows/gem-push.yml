@@ -25,6 +25,11 @@ jobs:
       - name: Build
         run: gem build ${{ steps.name.outputs.NAME }}.gemspec
 
+      - name: Update Version
+        run: |
+          sed -i -e '/spec.version/c\  spec.version       = "${GITHUB_REF_NAME:1}"' \
+          ${{ steps.name.outputs.NAME }}.gemspec
+
       - name: Credentials & Push
         run: |
           mkdir -p $HOME/.gem
@@ -37,11 +42,6 @@ jobs:
             --host="https://rubygems.pkg.github.com/${{ github.repository_owner }}" \
             ${{ steps.name.outputs.NAME }}-*.gem
           gem push --key=rubygems ${{ steps.name.outputs.NAME }}-*.gem
-
-      - name: Update Version
-        run: |
-          sed -i -e '/spec.version/c\  spec.version       = "${GITHUB_REF_NAME:1}"' \
-          ${{ steps.name.outputs.NAME }}.gemspec
 
       - name: Version PR
         uses: peter-evans/create-pull-request@v3
