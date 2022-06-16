@@ -14,6 +14,15 @@
   <body>
     {% include logo.html image=site.acn.logo.alt_image size=site.acn.logo.alt_size title=author %}
 
+    {% if content %}
+    <article class="{{ page.style | default: 'center' }}" >
+      {% if page.image %}
+        <img src="{{ page.image }}" alt="{{ author }}" width="{{ page.size }}" />
+      {% endif %}
+      {{ content }}
+    </article>
+    {% endif %}
+
     {% if posts.size and author %}
       {% include grid.html posts=posts %}
     {% endif %}

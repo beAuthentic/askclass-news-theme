@@ -171,3 +171,14 @@ footer {
     }
   }
 }
+
+article {
+  &.center {
+    @include align-center();
+  }
+  &.left img {
+    float: left;
+    margin: 10px 10px 0 0;
+    display: inline-block;
+  }
+}
