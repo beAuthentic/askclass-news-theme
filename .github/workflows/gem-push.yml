@@ -14,10 +14,6 @@ jobs:
         with:
          bundler-cache: true
 
-      - name: Get Release Version
-        id: version
-        run: echo ::set-output name=VER::$(echo $GITHUB_REF | cut -d / -f 3)
-
       - name: Get Current Version
         id: old_version
         run: echo ::set-output name=VER::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
@@ -44,14 +40,14 @@ jobs:
 
       - name: Update Version
         run: |
-          sed -i -e '/spec.version/c\  spec.version       = "${{ steps.version.outputs.VER }}"' \
+          sed -i -e '/spec.version/c\  spec.version       = "${GITHUB_REF_NAME:1}"' \
           ${{ steps.name.outputs.NAME }}.gemspec
 
       - name: Version PR
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: Update to ${{ steps.version.outputs.VER }}
-          title: Update ${{ steps.name.outputs.NAME }} (${{ steps.version.outputs.VER }})
+          commit-message: Update to ${GITHUB_REF_NAME}
+          title: Update ${{ steps.name.outputs.NAME }} (${GITHUB_REF_NAME})
           body: ${{ steps.old_version.outputs.VER }}
           branch: update-version
           base: main
