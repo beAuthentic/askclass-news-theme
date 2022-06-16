@@ -1,0 +1,5 @@
+{% assign _value = include.info.writer | default: include.info.category %}
+{% assign writer = _value | default: 'Ghostwriter' | replace: "_", " " %}
+{% if include.info.category %}
+  {% assign writer_url = writer | downcase | replace: " ", "_" | prepend: "/writers/" %}
+{% endif %}

@@ -13,14 +13,12 @@
 
           <h1>{{ page.title }}</h1>
           <small>{{ page.date | date: site.acn.date_format }}</small>
-          {% if page.writer %}
-            <h5>{{ page.writer }}</h5>
-          {% elsif page.category %}
-            <h5><a href="/writers/{{ page.category | downcase }}">
-              {{ page.category | replace: "_", " " }}
-            </a></h5>
+
+          {% include writer.html info=page %}
+          {% if writer_url %}
+            <h5><a href="{{ writer_url }}">{{ writer }}</a></h5>
           {% else %}
-            <h5>Ghost Writer</h5>
+            <h5>{{ writer }}</h5>
           {% endif %}
         </header>
 

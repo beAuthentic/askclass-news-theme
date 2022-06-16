@@ -11,12 +11,11 @@
         <div class="tab">{{ words.size }}<small>words</small></div>
       {% endif %}
       <div class="header">
-        {% if post.writer %}
-          {{ post.writer }}
+        {% include writer.html info=post %}
+        {% if writer_url %}
+          <a href="{{ writer_url }}">{{ writer }}</a>
         {% else %}
-          <a href="/writers/{{ post.category | downcase }}">
-            {{ post.category | replace: "_", " " }}
-          </a>
+          {{ writer }}
         {% endif %}
       </div>
       <div class="body">
