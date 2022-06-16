@@ -15,8 +15,9 @@ jobs:
          bundler-cache: true
 
       - name: Get Current Version
-        id: old_version
-        run: echo ::set-output name=VER::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
+        id: version
+        run: echo ::set-output name=OLD::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
+        run: echo ::set-output name=NEW::$(echo ${GITHUB_REF_NAME:1})
 
       - name: Get Package Name
         id: name
@@ -27,7 +28,7 @@ jobs:
 
       - name: Update Version
         run: |
-          sed -i -e '/spec.version/c\  spec.version       = "${GITHUB_REF_NAME:1}"' \
+          sed -i -e '/spec.version/c\  spec.version       = "${{ steps.version.outputs.NEW }}"' \
           ${{ steps.name.outputs.NAME }}.gemspec
 
       - name: Credentials & Push
@@ -46,8 +47,8 @@ jobs:
       - name: Version PR
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: Update to ${GITHUB_REF_NAME}
-          title: Update ${{ steps.name.outputs.NAME }} (${GITHUB_REF_NAME})
-          body: ${{ steps.old_version.outputs.VER }}
+          commit-message: Update to ${{ steps.version.outputs.NEW }}
+          title: Update ${{ steps.name.outputs.NAME }} (${{ steps.version.outputs.NEW })
+          body: ${{ steps.old_version.outputs.OLD }}
           branch: update-version
           base: main
