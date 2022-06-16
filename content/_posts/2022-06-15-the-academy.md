@@ -14,7 +14,7 @@ Founded the Academy (c.387<sub>B.C.</sub>) in Athens, the most influential and i
 A pupil and friend of Socrates, and taught one of the greatest philosopher, Aristotle.
 <!--more-->
 
-Plato produced 35 dialogues and 13 letters works including:
+Plato produced 35 dialogues and 13 letters including:
 
 - Early (Socratic dialogues):
   - The Apology
@@ -31,7 +31,8 @@ Plato produced 35 dialogues and 13 letters works including:
   - The Laws
   - Parmenides
 
-In <cite>The Republic</cite> he argues for the philosopher-king because only a philosopher
-"understands the harmony of all parts of the universe with the Idea of the Good, is capable of ruling the just state."
+In his magnum opus, <cite>The Republic</cite> Plato argues for the philosopher-king as best kind of ruler;
+only a philosopher "understands the harmony of all parts of the universe with the Idea of the Good,"
+and therefore, "is capable of ruling the just state."
 
 > Virtue consists in the harmony of the human soul with the universe of Ideas, which assure order, intelligence, and pattern to a world in constant flux. Supreme among them is the Idea of the Good, analogous to the sun in the physical world.
