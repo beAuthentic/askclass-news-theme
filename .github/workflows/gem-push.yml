@@ -1,6 +1,8 @@
-name: Gem Push
+name: Jekyll Theme
 
-on: push
+on:
+  release:
+    type: [published]
 
 jobs:
   build:
@@ -12,8 +14,12 @@ jobs:
         with:
          bundler-cache: true
 
-      - name: Get Version
+      - name: Get Release Version
         id: version
+        run: echo ::set-output name=VER::$(echo $GITHUB_REF | cut -d / -f 3)
+
+      - name: Get Current Version
+        id: old_version
         run: echo ::set-output name=VER::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
 
       - name: Get Package Name
@@ -33,5 +39,19 @@ jobs:
           gem push \
             --key=github \
             --host="https://rubygems.pkg.github.com/${{ github.repository_owner }}" \
-            ${{ steps.name.outputs.NAME }}-${{ steps.version.outputs.VER }}.gem
-          gem push --key=rubygems ${{ steps.name.outputs.NAME }}-${{ steps.version.outputs.VER }}.gem
+            ${{ steps.name.outputs.NAME }}-*.gem
+          gem push --key=rubygems ${{ steps.name.outputs.NAME }}-*.gem
+
+      - name: Update Version
+        run: |
+          sed -i -e '/spec.version/c\  spec.version       = "${{ steps.version.outputs.VER }}"' \
+          ${{ steps.name.outputs.NAME }}.gemspec
+
+      - name: Version PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Update to ${{ steps.version.outputs.VER }}
+          title: Update ${{ steps.name.outputs.NAME }} (${{ steps.version.outputs.VER }})
+          body: ${{ steps.old_version.outputs.VER }}
+          branch: update-version
+          base: main

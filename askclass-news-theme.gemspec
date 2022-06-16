@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "askclass-news-theme"
-  spec.version       = "0.1.1"
+  spec.version       = "0.2.0"
   spec.authors       = ["AskClass"]
   spec.email         = ["team@askclass.com"]
 
@@ -8,7 +8,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://news.askclass.com"
   spec.license       = "MPL-2.0"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|content|_layouts|_includes|_sass|LICENSE|README|_config\.yml|pwabuilder|manifest|index\.html)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select do |f|
+    f.match(%r!^(assets|content|_(layouts|includes|sass)|LICENSE|README|_config\.yml)!i)
+  end
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
 end
