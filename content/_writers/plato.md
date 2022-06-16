@@ -1,7 +1,7 @@
 ---
 layout: writer
 size: 100
-style: left
+style: center
 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/800px-Plato_Silanion_Musei_Capitolini_MC1377.jpg"
 ---
 

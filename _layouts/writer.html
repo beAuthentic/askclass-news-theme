@@ -17,7 +17,7 @@
     {% if content %}
     <article class="{{ page.style | default: 'center' }}" >
       {% if page.image %}
-        <img src="{{ page.image }}" alt="{{ author }}" width="{{ page.size }}" />
+        <img src="{{ page.image }}" alt="{{ author }}" width="{{ page.size }}" height="{{ page.size }}"/>
       {% endif %}
       {{ content }}
     </article>

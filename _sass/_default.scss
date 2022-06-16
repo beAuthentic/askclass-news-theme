@@ -176,9 +176,14 @@ article {
   &.center {
     @include align-center();
   }
+  &.center img {
+    border-radius: 50%;
+    object-fit: cover;
+  }
   &.left img {
     float: left;
-    margin: 10px 10px 0 0;
+    object-fit: cover;
+    margin: 5px 10px 0 0;
     display: inline-block;
   }
 }
