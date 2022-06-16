@@ -1,3 +1,9 @@
+# Add the below to your _config.yml
+collections_dir: content
+collections:
+  writers:
+    output: true
+
 # Custom fields
 title: "AskClass News"
 description: "News and discussions on learning and education"
@@ -13,6 +19,7 @@ logo:
 color:
   theme: "#ffc100"
   bg: "#222"
+date_format: "%b %d, %Y"
 
 footer:
   - icon: "copyright"
@@ -34,11 +41,6 @@ excerpt_separator: "<!--more-->"
 
 sass:
   style: compact
-
-collections_dir: content
-collections:
-  writers:
-    output: true
 
 exclude:
   - README.md

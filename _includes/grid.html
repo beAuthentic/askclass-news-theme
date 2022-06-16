@@ -2,7 +2,7 @@
   {% for post in include.posts %}
     <li class="card-tab {{ post.color }}">
       <div class="top-bar">
-        {{ post.date | date: "%b %d, %Y" }}
+        {{ post.date | date: site.date_format }}
       </div>
       {% if post.icon %}
        <div class="tab"><span class="material-icons">{{ post.icon }}</span></div>
