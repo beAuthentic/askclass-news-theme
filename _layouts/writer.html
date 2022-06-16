@@ -12,7 +12,7 @@
 <html lang="en">
   {% include header.html %}
   <body>
-    {% include logo.html image=site.logo.alt_image size=site.logo.alt_size title=author %}
+    {% include logo.html image=site.acn.logo.alt_image size=site.acn.logo.alt_size title=author %}
 
     {% if posts.size and author %}
       {% include grid.html posts=posts %}

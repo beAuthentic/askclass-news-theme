@@ -8,17 +8,23 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <meta name="theme-color" content="{{ site.color.theme }}" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="{{ site.color.theme }}" />
+  <meta name="theme-color" content="{{ site.acn.color.theme }}" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="{{ site.acn.color.theme }}" />
 
   <meta property="og:site_name" content="{{ site.title }}" />
-  {% if site.twitter %}
-  <meta name="twitter:site" content="{{ site.twitter }}" />
+  {% assign desc = page.excerpt | default: site.description | strip_html | strip_newlines %}
+  <meta name="description" content="{{ desc }}" />
+  <meta property="og:description" content="{{ desc }}" />
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:image" content="{{ page.image | default: '/assets/logo-square-300.png' }}" />
+  {% if site.acn.twitter %}
+  <meta name="twitter:site" content="{{ site.acn.social.twitter }}" />
   <meta name="twitter:card" content="summary_large_image">
   {% endif % %}
 
   <link rel="manifest" href="/assets/site.webmanifest" />
-  {% assign families = site.font_families | join: "&family=" %}
+  {% assign families = site.acn.font_families | join: "&family=" %}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{ families }}&display=swap" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />

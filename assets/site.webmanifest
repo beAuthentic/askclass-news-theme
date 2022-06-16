@@ -1,15 +1,15 @@
 ---
 ---
 {
-  "background_color": "{{ site.color.bg }}",
-  "theme_color": "{{ site.color.theme }}",
+  "background_color": "{{ site.acn.color.bg }}",
+  "theme_color": "{{ site.acn.color.theme }}",
   "name": "{{ site.title }}",
-  "short_name": "{{ site.title }}",
-  "categories": [ "{{ site.site_cat | join: '","' }}" ],
+  "short_name": "{{ site.acn.short_name }}",
+  "categories": [ "{{ site.acn.categories | join: '","' }}" ],
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "description": "{{ site.description }}",
+  "description": "{{ site.description | strip_newlines }}",
   "orientation": "portrait-primary",
   "dir": "auto",
   "icons": [

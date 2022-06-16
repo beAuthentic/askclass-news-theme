@@ -1,40 +1,46 @@
+# Custom fields
+title: "AskClass News"
+description: >
+  We are exploring the intersection between education and technology;
+  how innovations in cross-disciplinary learning and collaboration
+  will change the trajectory of our society toward love for
+  humanity and appreciation of life.
+
+acn:
+  date_format: "%b %d, %Y"
+  short_name: "AC News"
+  color:
+    theme: "#ffc100"
+    bg: "#222"
+  url: "https://news.askclass.com"
+  categories:
+    - education
+  social:
+    twitter: "askclass_com"
+  logo:
+    image: "logo-icon.svg"
+    size: 70
+    alt_image: "logo.svg"
+    alt_size: 200
+  footer:
+    - icon: "copyright"
+      href: "https://askclass.com"
+      text: "AskClass"
+    - icon: "toys"
+      href: "https://app.askclass.com"
+      text: "Icebreakers"
+  font_families:
+    - Teko
+    - Open+Sans
+    - Josefin+Sans
+    - Share+Tech+Mono
+    - Material+Icons
+
 # Add the below to your _config.yml
 collections_dir: content
 collections:
   writers:
     output: true
-
-# Custom fields
-title: "AskClass News"
-description: "News and discussions on learning and education"
-site_url: "https://news.askclass.com"
-site_cat:
-  - education
-twitter: "askclass_com"
-logo:
-  image: "logo-icon.svg"
-  size: 70
-  alt_image: "logo.svg"
-  alt_size: 200
-color:
-  theme: "#ffc100"
-  bg: "#222"
-date_format: "%b %d, %Y"
-
-footer:
-  - icon: "copyright"
-    href: "https://askclass.com"
-    text: "AskClass"
-  - icon: "toys"
-    href: "https://app.askclass.com"
-    text: "Icebreakers"
-
-font_families:
-  - Teko
-  - Open+Sans
-  - Josefin+Sans
-  - Share+Tech+Mono
-  - Material+Icons
 
 # Theme
 excerpt_separator: "<!--more-->"

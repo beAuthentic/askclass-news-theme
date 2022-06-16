@@ -12,7 +12,7 @@
           {% endif %}
 
           <h1>{{ page.title }}</h1>
-          <small>{{ page.date | date: "%b %m, %Y" }}</small>
+          <small>{{ page.date | date: site.acn.date_format }}</small>
           {% if page.writer %}
             <h5>{{ page.writer }}</h5>
           {% elsif page.category %}
