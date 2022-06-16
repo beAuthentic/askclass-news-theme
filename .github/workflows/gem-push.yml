@@ -16,8 +16,9 @@ jobs:
 
       - name: Get Current Version
         id: version
-        run: echo ::set-output name=OLD::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
-        run: echo ::set-output name=NEW::$(echo ${GITHUB_REF_NAME:1})
+        run: |
+          echo ::set-output name=OLD::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
+          echo ::set-output name=NEW::$(echo ${GITHUB_REF_NAME:1})
 
       - name: Get Package Name
         id: name
