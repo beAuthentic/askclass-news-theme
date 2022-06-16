@@ -49,7 +49,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: Update to ${{ steps.version.outputs.NEW }}
-          title: Update ${{ steps.name.outputs.NAME }} (${{ steps.version.outputs.NEW })
+          title: Update ${{ steps.name.outputs.NAME }} (${{ steps.version.outputs.NEW }})
           body: ${{ steps.old_version.outputs.OLD }}
           branch: update-version
           base: main
