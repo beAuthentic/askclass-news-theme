@@ -24,13 +24,13 @@ jobs:
         id: name
         run: echo ::set-output name=NAME::$(grep 'spec.name' *.gemspec | cut -d'"' -f2)
 
-      - name: Build
-        run: gem build ${{ steps.name.outputs.NAME }}.gemspec
-
       - name: Update Version
         run: |
           sed -i -e '/spec.version/c\  spec.version       = "${{ steps.version.outputs.NEW }}"' \
           ${{ steps.name.outputs.NAME }}.gemspec
+
+      - name: Build
+        run: gem build ${{ steps.name.outputs.NAME }}.gemspec
 
       - name: Credentials & Push
         run: |
