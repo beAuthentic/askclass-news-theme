@@ -1,10 +1,9 @@
 # Custom fields
 title: "AskClass News"
 description: >
-  We are exploring the intersection between education and technology;
-  how innovations in cross-disciplinary learning and collaboration
-  will change the trajectory of our society toward love for
-  humanity and appreciation of life.
+  Exploring the intersection between education and technology;
+  how innovations in cross-disciplinary learning reorients the
+  trajectory of our society toward love and appreciation of life.
 
 acn:
   date_format: "%b %d, %Y"
@@ -25,7 +24,7 @@ acn:
     sizes: [ 48, 96, 144, 192, 300, 512 ]
   meta:
     apple_icon: "logo-300.png"
-    og_image: "/assets/logo-square-300.png"
+    og_image: "logo-square-512.png"
     shortcut:
       favicon: "favicon.ico"
       type: "image/png"

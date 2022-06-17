@@ -1,6 +1,7 @@
 {% assign acn = site.acn %}
 {% assign desc = page.excerpt | default: site.description | strip_html | strip_newlines %}
 {% assign families = acn.font_families | join: "&family=" %}
+{% assign og_image = acn.meta.og_image | prepend: '/assets/' | prepend: site.url %}
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -17,9 +18,8 @@
 
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:description" content="{{ desc }}" />
-  <meta property="og:title" content="{{ page.title | default: site.title }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="{{ page.image | default: acn.meta.og_image }}" />
+  <meta property="og:image" content="{{ page.image | default: og_image }}" />
   {% if acn.twitter %}
   <meta name="twitter:site" content="{{ acn.social.twitter }}" />
   <meta name="twitter:card" content="summary_large_image">
