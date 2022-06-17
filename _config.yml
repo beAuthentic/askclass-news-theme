@@ -25,7 +25,7 @@ acn:
     sizes: [ 48, 96, 144, 192, 300, 512 ]
   meta:
     apple_icon: "logo-300.png"
-    og_image: "logo-square-300.png"
+    og_image: "/assets/logo-square-300.png"
     shortcut:
       favicon: "favicon.ico"
       type: "image/png"
