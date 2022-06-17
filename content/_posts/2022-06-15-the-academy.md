@@ -9,9 +9,7 @@ source: "Columbia University Press"
 source_url: http://www.columbia.edu/itc/lithum/wong/plato.html
 ---
 
-Plato, a Greek philosopher who lived for a time at the Syracuse court.
-Founded the Academy (c.387<sub>B.C.</sub>) in Athens, the most influential and important learning instituion where he taught until his death in 347<sub>B.C.</sub>.
-A pupil and friend of Socrates, and taught one of the greatest philosopher, Aristotle.
+Plato, a Greek philosopher who lived for a time at the Syracuse court. Founded the Academy (c.387<sub>B.C.</sub>) in Athens, the most influential and important learning instituion where he taught until his death in 347<sub>B.C.</sub>. A pupil and friend of Socrates, and taught one of the greatest philosopher, Aristotle.
 <!--more-->
 
 Plato produced 35 dialogues and 13 letters including:
