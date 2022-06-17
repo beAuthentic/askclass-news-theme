@@ -29,6 +29,18 @@ acn:
       favicon: "favicon.ico"
       type: "image/png"
       image: "logo-96.png"
+    keywords: >
+      edtech,
+      education,
+      technology,
+      learning,
+      teaching,
+      student,
+      educator,
+      university,
+      icebreaker,
+      student engagement,
+      participation
   footer:
     - icon: "copyright"
       href: "https://askclass.com"
