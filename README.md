@@ -4,39 +4,67 @@ Simple responsive Jekyll theme featuring posts and authors.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "askclass-news-theme"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: askclass-news-theme
-```
-
-And then execute:
-
 ```sh
+# If starting fresh add this
+$ echo 'source "https://rubygems.org"' > Gemfile
+
+$ echo 'gem "askclass-news-theme"' >> Gemfile
+$ sed -i '1 s/^/theme: askclass-news-theme\n/' _config.yml
 $ bundle
 ```
 
-## Usage
+## Configuration
 
-Customizable fields in the `_config.yaml`:
+Copy these files:
+- `index.html`
+- `config.yml` (edit this to fit your need)
+- `content/` (whole folder as an example)
+- `pwabuilder-sw.js` (PWA)
 
-Field | Description
-:--- | :---
-`title` | Name of the site
-`description` | Describe the site
-`site_url` | For meta field
-`site_cat` | [Manifest Categories] used in `manifest.json`
-`twitter` | Optional Twitter handle for meta field
-`logo` | Logo images and sizes for header of the page
-`color` | For dressing the splash screen and chrome
-`footer` | Bottom of the page info
-`font_families` | Which [Google Fonts] to load (edit `_sass/_default.scss` correspondingly)
+## Post File Format
+
+```md
+---
+# Don't change this
+layout: post
+# Well, what else could this be?
+title: The Hobbit
+# This is your author's name
+category: J.R.R._Tolkien
+# Alternatively
+writer: J.R.R Tolkien
+# Values: c1 .. c10
+color: c1
+# Tags separated by spaces
+tags: fiction fantasy
+# Optional title image (shows up on index)
+image: https://article.images/iamge.jpg
+# Optional source info
+source: The Tolkien Society
+source_url: https://www.tolkiensociety.org/
+---
+
+Whatever is here goes gets on index.
+<!--more-->
+The rest of the article.
+```
+
+## Writer File Format
+
+```md
+---
+# Don't change this
+layout: writer
+# Optional size of image
+size: 100
+# Optional position of the profile image either center or left
+style: center
+# Optional image
+image: https://author.images/tolkien.jpg
+---
+
+Biography.
+```
 
 ## Contributing
 
