@@ -2,16 +2,17 @@ $odd: #3f3f3f;
 $header: #2f2f2f;
 $border: #333;
 
-table, th, td {
+table {
   border-bottom: 1px solid $border;
   border-collapse: collapse;
-  padding: 5px;
-}
-
-th {
-  background-color: $header;
-}
-
-tr:nth-child(odd) {
-  background-color: $odd;
+  th {
+    background-color: $header;
+  }
+  tr:nth-child(even) {
+    background-color: $odd;
+  }
+  td, th {
+    vertical-align: top;
+    padding: 5px;
+  }
 }

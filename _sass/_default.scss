@@ -1,8 +1,7 @@
-$specialFont: 'Josefin Sans', sans-serif;
 $mainFont: 'Open Sans', sans-serif;
 $secondaryFont: 'Teko', sans-serif;
+$specialFont: 'Josefin Sans', sans-serif;
 $monoFont: 'Share Tech Mono', monospace;
-$textFont: 'Lexend', sans-serif;
 $primaryColor: aliceblue;
 $secondaryColor: skyblue;
 $linkColor: deeppink;
@@ -18,7 +17,6 @@ html {
   --mainFont: #{$mainFont};
   --secondaryFont: #{$secondaryFont};
   --monoFont: #{$monoFont};
-  --textFont: #{$textFont};
   --primaryColor: #{$primaryColor};
   --secondaryColor: #{$secondaryColor};
   --linkColor: #{$linkColor};
