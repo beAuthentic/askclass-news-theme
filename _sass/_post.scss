@@ -2,6 +2,8 @@ article {
   max-width: var(--contentWidth);
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
+  word-break: break-word;
   h1, h2, h3, h4 {
     color: var(--themeColor);
   }
