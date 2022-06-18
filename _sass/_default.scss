@@ -159,6 +159,7 @@ footer {
   color: $darkColor;
   font-size: 14px;
   ul {
+    padding: 0;
     display: flex;
     li {
       @include align-middle();
