@@ -2,13 +2,11 @@
   {% include head/meta.html %}
   {% include head/common.html %}
   {% include head/pwaupdate.html %}
-
-  <link href="{{ 'assets/css/style.css' |  relative_url }}" rel="stylesheet" />
-
   {% if page.collection == 'posts' %}
   <link href="{{ 'assets/css/md.css' | relative_url }}" rel="stylesheet" />
   {% else %}
   <link href="{{ 'assets/css/grid.css' |  relative_url }}" rel="stylesheet" />
   <link href="{{ 'assets/css/tab.css' |  relative_url }}" rel="stylesheet" />
   {% endif %}
+  <link href="{{ 'assets/css/style.css' |  relative_url }}" rel="stylesheet" />
 </head>
