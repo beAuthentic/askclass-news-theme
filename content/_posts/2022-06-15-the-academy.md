@@ -2,9 +2,9 @@
 layout: post
 title: "The Academy"
 category: Plato
-color: c1
+color: c8
 tags: philosopy bio
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Anselm_Feuerbach_-_Das_Gastmahl._Nach_Platon_%28zweite_Fassung%29_-_Google_Art_Project.jpg/1280px-Anselm_Feuerbach_-_Das_Gastmahl._Nach_Platon_%28zweite_Fassung%29_-_Google_Art_Project.jpg"
+image: https://i.imgur.com/p3F1hWt.png
 source: "Columbia University Press"
 source_url: http://www.columbia.edu/itc/lithum/wong/plato.html
 ---
