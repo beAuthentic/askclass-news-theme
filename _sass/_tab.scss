@@ -57,7 +57,7 @@ html {
 }
 
 .header {
-  margin: 0px 50px 0 5px;
+  margin: 4px 50px 0 5px;
   text-align: left;
   line-height: 1;
   height: 30px;
@@ -92,6 +92,9 @@ html {
       margin: 0 0 0 5px;
       color: $fg;
     }
+  }
+  pre, code {
+    color: inherit;
   }
 }
 
