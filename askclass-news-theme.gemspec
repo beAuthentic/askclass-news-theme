@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "askclass-news-theme"
-  spec.version       = "0.2.12"
+  spec.version       = "0.3.0"
   spec.authors       = ["AskClass"]
   spec.email         = ["team@askclass.com"]
 
