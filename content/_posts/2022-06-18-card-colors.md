@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Card Colors
 category: Theme
 color: c10

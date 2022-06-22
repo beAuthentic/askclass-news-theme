@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Markdown Math Support"
 category: Theme
 color: c2

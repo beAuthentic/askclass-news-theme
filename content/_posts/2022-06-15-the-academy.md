@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "The Academy"
 category: Plato
 color: c8
