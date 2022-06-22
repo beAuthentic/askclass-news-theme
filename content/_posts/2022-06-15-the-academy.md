@@ -2,7 +2,7 @@
 title: "The Academy"
 category: Plato
 color: c8
-tags: philosopy bio
+tags: philosophy bio
 image: https://i.imgur.com/p3F1hWt.png
 source: "Columbia University Press"
 source_url: http://www.columbia.edu/itc/lithum/wong/plato.html
