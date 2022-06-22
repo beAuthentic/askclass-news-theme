@@ -27,7 +27,7 @@
         {% if page.tags %}
         <div class="spacer tags">
           {% for tag in page.tags %}
-            <small>{{ tag }}</small>
+            <small><a href="/tag/{{tag}}">{{ tag }}</a></small>
           {% endfor %}
         </div>
         {% endif %}
