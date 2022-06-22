@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  {% include header.html -%}
+  <body>
+    {%- assign url = page.url | split: '/' -%}
+    {%- assign tag = url.last -%}
+    {%- for t in site.tags -%}
+      {%- if t[0] != tag -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- assign posts = t[1] -%}
+      {%- break -%}
+    {%- endfor -%}
+
+    {% include logo.html image=site.acn.logo.alt_image size=site.acn.logo.alt_size title=tag -%}
+    {%- if posts.size -%}
+      {% include grid.html posts=posts %}
+    {%- else -%}
+      <article class="tiles">
+        <ul>
+          {%- for t in site.tags -%}
+            <li><a href="/tag/{{ t[0] }}">{{ t[0] }}<sup>{{ t[1].size }}</sup></a></li>
+          {%- endfor -%}
+        </ul>
+      </article>
+    {%- endif -%}
+    {%- include footer.html %}
+  </body>
+</html>
+
+

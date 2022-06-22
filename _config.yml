@@ -2,8 +2,8 @@
 title: "AskClass News"
 description: >
   Exploring the intersection between education and technology;
-  how innovations in cross-disciplinary learning reorients the
-  trajectory of our society toward love and appreciation of life.
+  how innovations in cross-disciplinary learning reorients our
+  trajectory toward love and appreciation of life.
 
 acn:
   date_format: "%b %d, %Y"
@@ -11,7 +11,7 @@ acn:
   color:
     theme: "#ffc100"
     bg: "#222"
-  url: "https://news.askclass.com"
+  url: "https://acn.askclass.com"
   categories:
     - education
   social:
@@ -56,14 +56,19 @@ acn:
     - Share+Tech+Mono
     - Material+Icons
 
-# Add the below to your _config.yml
 collections_dir: content
 collections:
   writers:
     output: true
 
-# Theme
 excerpt_separator: "<!--more-->"
+permalink: /:year/:month/:day/:title
+
+defaults:
+  - scope:
+      type: tags
+    values:
+      layout: tags
 
 sass:
   style: compact

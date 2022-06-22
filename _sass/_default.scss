@@ -186,3 +186,27 @@ article {
     display: inline-block;
   }
 }
+
+article.tiles {
+  ul {
+    list-style-type: none;
+    padding-inline-start: unset;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    li {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      text-align: center;
+      background-color: $secondaryColor;
+      a {
+        color: $bgColor;
+      }
+      sup {
+        vertical-align: 3px;
+      }
+    }
+  }
+}
+
