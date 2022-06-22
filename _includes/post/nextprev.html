@@ -1,18 +1,24 @@
-{% assign p = page[include.p] %}
-{% if p %}
+{%- assign p = page[include.p] -%}
 <div class="paginator">
-  {% if include.p == 'next' %}
-    {% assign align = 'pull-left' %}
-    {% assign arrow = 'before' %}
-  {% else %}
-    {% assign align = 'pull-right' %}
-    {% assign arrow = 'next' %}
-  {% endif %}
+  {%- if include.p == 'next' -%}
+    {%- assign align = 'pull-left' -%}
+    {%- assign arrow = 'before' -%}
+    {%- assign indicator = 'Newer' -%}
+  {%- else -%}
+    {%- assign align = 'pull-right' -%}
+    {%- assign arrow = 'next' -%}
+    {%- assign indicator = 'Older' -%}
+  {%- endif -%}
+  {%- if p %}
   <div class="{{ align }}">
-    <span>{{ include.p | capitalize }}</span>
+    <span>{{ indicator }}</span>
     <span class="material-icons">navigate_{{ arrow }}</span>
   </div>
-  <img src="{{ p.image }}" width="100%" alt="{{ p.title }}" />
-  <a href="{{ p.url }}">{{ p.title }}</a>
+  <a href="{{ p.url }}">
+    <img src="{{ p.image }}" width="100%" alt="{{ p.title }}" />
+    {{ p.title }}
+  </a>
+  {%- else %}
+  <div class="{{ align }}">&nbsp;</div>
+  {% endif -%}
 </div>
-{% endif %}
