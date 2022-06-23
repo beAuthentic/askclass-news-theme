@@ -84,7 +84,7 @@ defaults:
 sass:
   style: compact
 
-keep_files:
+include:
   - index.html
   - 404.html
   - pwabuilder-sw.js
