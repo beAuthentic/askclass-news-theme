@@ -16,10 +16,14 @@
     {%- if posts.size -%}
       {% include grid.html posts=posts %}
     {%- else -%}
+      {%- capture site_tags -%}
+        {% for tag in site.tags %}{{ tag[0] }}{% unless forloop.last %},{% endunless %}{% endfor -%}
+      {% endcapture -%}
+      {% assign tags_list = site_tags | split: ',' | sort_natural -%}
       <article class="tiles">
         <ul>
-          {%- for t in site.tags -%}
-            <li><a href="/hashtags/{{ t[0] }}">{{ t[0] }}<sup>{{ t[1].size }}</sup></a></li>
+          {%- for item in tags_list -%}
+            <li><a href="/hashtags/{{ item }}">{{ item }}<sup>{{ site.tags[item].size }}</sup></a></li>
           {%- endfor -%}
         </ul>
       </article>
@@ -27,5 +31,3 @@
     {%- include footer.html %}
   </body>
 </html>
-
-
