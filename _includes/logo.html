@@ -4,5 +4,9 @@
       width="{{ include.size | default: site.acn.logo.size }}"
       title="{{ site.title }}"/>
   </a>
+  {%- if include.href %}
+  <h3 class="special"><a href="{{ include.href }}">{{ include.title | default: site.title }}</a></h3>
+  {% else %}
   <h3 class="special">{{ include.title | default: site.title }}</h3>
+  {% endif -%}
 </section>

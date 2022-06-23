@@ -12,7 +12,7 @@
       {%- break -%}
     {%- endfor -%}
 
-    {% include logo.html image=site.acn.logo.alt_image size=site.acn.logo.alt_size title=tag -%}
+    {% include logo.html image=site.acn.logo.alt_image size=site.acn.logo.alt_size title=tag href='/hashtags' -%}
     {%- if posts.size -%}
       {% include grid.html posts=posts %}
     {%- else -%}
