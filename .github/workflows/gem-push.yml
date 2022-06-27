@@ -1,4 +1,4 @@
-name: Jekyll Theme
+name: Jekyll Build
 
 on:
   release:
@@ -53,3 +53,8 @@ jobs:
           body: ${{ steps.old_version.outputs.OLD }}
           branch: update-version
           base: main
+
+      - uses: actions/delete-package-versions@v3
+        with:
+          package-name: 'askclass-news-theme'
+          min-versions-to-keep: 5

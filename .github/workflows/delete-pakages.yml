@@ -1,4 +1,0 @@
-- uses: actions/delete-package-versions@v3
-  with:
-    package-name: 'askclass-news-theme'
-    min-versions-to-keep: 5
