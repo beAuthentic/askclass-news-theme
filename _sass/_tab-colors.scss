@@ -1,25 +1,25 @@
-$c1: #005F73;
-$c2: #03989E;
-$c3: #CA6702;
-$c4: #EE9B00;
-$c5: #355691;
-$c6: #4073A0;
-$c7: #3C5A14;
-$c8: #598B2C;
-$c9: #9B2226;
-$c10: #B18FCF;
+$color-1: #005F73;
+$color-2: #03989E;
+$color-3: #CA6702;
+$color-4: #EE9B00;
+$color-5: #355691;
+$color-6: #4073A0;
+$color-7: #3C5A14;
+$color-8: #598B2C;
+$color-9: #9B2226;
+$color-10: #B18FCF;
 
 html {
-  --c1: #{$c1};
-  --c2: #{$c2};
-  --c3: #{$c3};
-  --c4: #{$c4};
-  --c5: #{$c5};
-  --c6: #{$c6};
-  --c7: #{$c7};
-  --c8: #{$c8};
-  --c9: #{$c9};
-  --c10: #{$c10};
+  --c1: #{$color-1};
+  --c2: #{$color-2};
+  --c3: #{$color-3};
+  --c4: #{$color-4};
+  --c5: #{$color-5};
+  --c6: #{$color-6};
+  --c7: #{$color-7};
+  --c8: #{$color-8};
+  --c9: #{$color-9};
+  --c10: #{$color-10};
 }
 
 @mixin paint($color) {
@@ -46,32 +46,32 @@ html {
 }
 
 .c1 {
-  @include paint($c1);
+  @include paint($color-1);
 }
 .c2 {
-  @include paint($c2);
+  @include paint($color-2);
 }
 .c3 {
-  @include paint($c3);
+  @include paint($color-3);
 }
 .c4 {
-  @include paint($c4);
+  @include paint($color-4);
 }
 .c5 {
-  @include paint($c5);
+  @include paint($color-5);
 }
 .c6 {
-  @include paint($c6);
+  @include paint($color-6);
 }
 .c7 {
-  @include paint($c7);
+  @include paint($color-7);
 }
 .c8 {
-  @include paint($c8);
+  @include paint($color-8);
 }
 .c9 {
-  @include paint($c9);
+  @include paint($color-9);
 }
 .c10 {
-  @include paint($c10);
+  @include paint($color-10);
 }

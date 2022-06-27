@@ -1,12 +1,12 @@
-$width: 180px;
-$height: 180px;
+$size-width: 180px;
+$size-height: 180px;
 
 ul.grid {
   list-style-type: none;
   padding-inline-start: unset;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax($size-width, 1fr));
   clear: both;
 
   li {
@@ -19,6 +19,6 @@ ul.grid {
   img {
     object-fit: cover;
     width: 100%;
-    height: $height;
+    height: $size-height;
   }
 }

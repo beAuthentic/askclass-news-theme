@@ -1,4 +1,4 @@
-$width: 150px;
+$size-width: 150px;
 
 .paginator-container {
   max-width: var(--contentWidth);
@@ -8,7 +8,7 @@ $width: 150px;
 }
 
 .paginator {
-  width: $width;
+  width: $size-width;
   a {
     text-align: center;
     display: block;

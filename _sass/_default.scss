@@ -1,39 +1,39 @@
-$mainFont: 'Open Sans', sans-serif;
-$secondaryFont: 'Teko', sans-serif;
-$specialFont: 'Josefin Sans', sans-serif;
-$monoFont: 'Share Tech Mono', monospace;
-$primaryColor: aliceblue;
-$secondaryColor: skyblue;
-$linkColor: deeppink;
-$bgColor: #222;
-$fgColor: ivory;
-$darkColor: gray;
-$contentWidth: 600px;
-$themeColor: #ffc100;
-$tertiaryColor: #2cdd88;
+$font-main: 'Open Sans', sans-serif;
+$font-secondary: 'Teko', sans-serif;
+$font-special: 'Josefin Sans', sans-serif;
+$font-mono: 'Share Tech Mono', monospace;
+$color-primary: aliceblue;
+$color-secondary: skyblue;
+$color-tertiary: #2cdd88;
+$color-bg: #222;
+$color-fg: ivory;
+$color-dark: gray;
+$color-link: deeppink;
+$color-theme: #ffc100;
+$content-width: 600px;
 
 html {
-  --specialFont: #{$specialFont};
-  --mainFont: #{$mainFont};
-  --secondaryFont: #{$secondaryFont};
-  --monoFont: #{$monoFont};
-  --primaryColor: #{$primaryColor};
-  --secondaryColor: #{$secondaryColor};
-  --linkColor: #{$linkColor};
-  --bgColor: #{$bgColor};
-  --fgColor: #{$fgColor};
-  --darkColor: #{$darkColor};
-  --contentWidth: #{$contentWidth};
-  --themeColor: #{$themeColor};
-  --tertiaryColor: #{$tertiaryColor};
+  --specialFont: #{$font-special};
+  --mainFont: #{$font-main};
+  --secondaryFont: #{$font-secondary};
+  --monoFont: #{$font-mono};
+  --primaryColor: #{$color-primary};
+  --secondaryColor: #{$color-secondary};
+  --linkColor: #{$color-link};
+  --bgColor: #{$color-bg};
+  --fgColor: #{$color-fg};
+  --darkColor: #{$color-dark};
+  --contentWidth: #{$content-width};
+  --themeColor: #{$color-theme};
+  --tertiaryColor: #{$color-tertiary};
 }
 
 body {
-  font-family: $mainFont;
+  font-family: $font-main;
   font-size: 17px;
   line-height: 1.6;
-  background-color: $bgColor;
-  color: $fgColor;
+  background-color: $color-bg;
+  color: $color-fg;
   &::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -51,18 +51,18 @@ hr {
   width: 300px;
   margin-bottom: 20px;
   margin-top: 40px;
-  border-color: $bgColor;
+  border-color: $color-bg;
 }
 
 a {
-  color: $linkColor;
+  color: $color-link;
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $secondaryFont;
+  font-family: $font-secondary;
   font-weight: normal;
-  color: $secondaryColor;
+  color: $color-secondary;
   line-height: 1;
 }
 
@@ -74,19 +74,19 @@ h5 { font-size: 1.2em }
 h6 { font-size: 1em }
 
 .special {
-  font-family: $specialFont;
+  font-family: $font-special;
   text-align: center;
-  color: $primaryColor;
+  color: $color-primary;
   margin: 10px 0 5px 0;
 }
 
 code, pre {
-  font-family: $specialFont;
+  font-family: $font-special;
 }
 
 code {
   white-space: pre-wrap;
-  color: $primaryColor;
+  color: $color-primary;
 }
 
 pre {
@@ -156,7 +156,7 @@ sub {
 footer {
   @include margin-top();
   @include align-center();
-  color: $darkColor;
+  color: $color-dark;
   font-size: 14px;
   ul {
     padding: 0;
@@ -165,7 +165,7 @@ footer {
       @include align-middle();
       margin: 0 5px;
       a {
-        color: $darkColor;
+        color: $color-dark;
       }
     }
   }
@@ -199,13 +199,13 @@ article.tiles {
       margin: 5px;
       border-radius: 5px;
       text-align: center;
-      background-color: $themeColor;
+      background-color: $color-theme;
       height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
       a {
-        color: $bgColor;
+        color: $color-bg;
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: break-word;

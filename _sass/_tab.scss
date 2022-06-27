@@ -1,23 +1,23 @@
-$bg: whitesmoke;
-$fg: #444;
-$fontSize: 16px;
+$color-bg: whitesmoke;
+$color-fg: #444;
+$size-font: 16px;
 
 @mixin special() {
-  color: $bg;
+  color: $color-bg;
   font-family: var(--specialFont);
 }
 
 html {
-  --bg: #{$bg};
-  --fg: #{$fg};
-  --fontSize: #{$fontSize};
+  --bg: #{$color-bg};
+  --fg: #{$color-fg};
+  --fontSize: #{$size-font};
 }
 
 .card-tab {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-image: linear-gradient(225deg, $fg 50%, transparent 50%);
+  background-image: linear-gradient(225deg, $color-fg 50%, transparent 50%);
   background-size: 120px 27px;
   background-repeat: no-repeat;
   background-position: right top;
@@ -25,9 +25,9 @@ html {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
   border-top-width: 22px;
   border-top-style: solid;
-  border-top-color: $fg;
-  background-color: $bg;
-  color: $fg;
+  border-top-color: $color-fg;
+  background-color: $color-bg;
+  color: $color-fg;
   text-transform: none;
   height: calc(100% - 22px);
 }
@@ -85,12 +85,12 @@ html {
   .item {
     margin-bottom: 20px;
     text-align: left;
-    font-size: $fontSize;
+    font-size: $size-font;
     border-top: 3px outset;
     line-height: normal;
     h3 {
       margin: 0 0 0 5px;
-      color: $fg;
+      color: $color-fg;
     }
   }
   pre, code {
@@ -105,14 +105,14 @@ html {
   justify-content: space-between;
   a {
     text-decoration: none;
-    font-size: $fontSize;
+    font-size: $size-font;
     display: contents;
     &.button {
       display: flex;
       border-radius: 5px;
       padding: 5px 10px;
       color: white!important;
-      background-color: $fg;
+      background-color: $color-fg;
     }
   }
   .tags {
