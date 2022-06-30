@@ -2,7 +2,7 @@
 title: "Markdown Math Support"
 category: Theme
 color: c2
-tags: theme instruction
+tags: theme instruction feature
 thumb: https://i.imgur.com/DMrjeFlm.png
 image: https://i.imgur.com/DMrjeFll.png
 source: GitHub
