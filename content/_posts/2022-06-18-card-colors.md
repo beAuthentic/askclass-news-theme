@@ -3,7 +3,8 @@ title: Card Colors
 category: Theme
 color: c10
 tags: theme colors
-image: https://i.imgur.com/3PXNluf.png
+thumb: https://i.imgur.com/3PXNlufm.png
+image: https://i.imgur.com/3PXNlufl.png
 ---
 This theme has 10 colors. Five set of colors with a darker shade. `c9` and `c10` break the rule.
 <!--more-->

@@ -3,12 +3,13 @@ title: "The Academy"
 category: Plato
 color: c8
 tags: philosophy bio
-image: https://i.imgur.com/p3F1hWt.png
+thumb: https://i.imgur.com/p3F1hWtm.png
+image: https://i.imgur.com/p3F1hWtl.png
 source: "Columbia University Press"
 source_url: http://www.columbia.edu/itc/lithum/wong/plato.html
 ---
 
-"The safest general characterization of the European philosophical tradition is that it consists of a series of footnotes to Plato." (British philosopher A.N Whitehead)
+"The safest general characterization of the European philosophical tradition is that it consists of a series of footnotes to Plato." (British philosopher A.N. Whitehead)
 <!--more-->
 
 Plato, a Greek philosopher who lived for a time at the Syracuse court. Founded the Academy (c.387<sub>B.C.</sub>) in Athens, the most influential and important learning instituion where he taught until his death in 347<sub>B.C.</sub>. A pupil and friend of Socrates, and taught one of the greatest philosopher, Aristotle.
