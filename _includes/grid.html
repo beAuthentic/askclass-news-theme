@@ -20,7 +20,7 @@
       </div>
       <div class="body">
         {% if post.image %}
-          <img src="{{ post.thumb | default: post.image }}" alt="{{ post.title }}" />
+          <img src="/assets/loading.svg" data="{{ post.thumb | default: post.image }}" alt="{{ post.title }}" />
         {% endif %}
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         {{ post.excerpt }}
@@ -40,3 +40,12 @@
     </li>
   {% endfor %}
 </ul>
+
+<script defer>
+  const samps = document.querySelectorAll('img');
+  samps.forEach( el => {
+    if (el.src.match(/loading\.svg$/) && el.attributes.data) {
+      el.src = el.attributes.data.value;
+    }
+  } );
+</script>
