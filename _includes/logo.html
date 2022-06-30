@@ -2,6 +2,7 @@
   <a href="/">
     <img src="/assets/{{ include.image | default: site.acn.logo.image }}"
       width="{{ include.size | default: site.acn.logo.size }}"
+      height="{{ include.height | default: site.acn.logo.height | default: site.acn.logo.size }}"
       title="{{ site.title }}"/>
   </a>
   {%- if include.href %}
