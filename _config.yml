@@ -1,5 +1,5 @@
 # Custom fields
-title: "AskClass News"
+title: "AskClass News Template"
 description: >
   Exploring the intersection between education and technology;
   how innovations in cross-disciplinary learning reorients our
@@ -45,6 +45,9 @@ acn:
     - icon: "copyright"
       href: "https://askclass.com"
       text: "AskClass"
+    - icon: "newspaper"
+      href: "https://news.askclass.com"
+      text: "News"
     - icon: "toys"
       href: "https://app.askclass.com"
       text: "Icebreakers"
