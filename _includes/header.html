@@ -2,10 +2,14 @@
   {% include head/meta.html %}
   {% include head/common.html %}
   {% if page.collection == 'posts' %}
-  <link href="{{ 'assets/css/md.css' | relative_url }}" rel="stylesheet" lazyload />
+  <link rel="preload" as="style" href="{{ 'assets/css/md.css' |  relative_url }}"
+        onload='this.onload=null;this.rel="stylesheet"' />
   {% else %}
-  <link href="{{ 'assets/css/grid.css' |  relative_url }}" rel="stylesheet" lazyload />
-  <link href="{{ 'assets/css/tab.css' |  relative_url }}" rel="stylesheet" lazyload />
+  <link rel="preload" as="style" href="{{ 'assets/css/grid.css' |  relative_url }}"
+        onload='this.onload=null;this.rel="stylesheet"' />
+  <link rel="preload" as="style" href="{{ 'assets/css/tab.css' |  relative_url }}"
+        onload='this.onload=null;this.rel="stylesheet"' />
   {% endif %}
-  <link href="{{ 'assets/css/style.css' |  relative_url }}" rel="stylesheet" lazyload />
+  <link rel="preload" as="style" href="{{ 'assets/css/style.css' |  relative_url }}"
+        onload='this.onload=null;this.rel="stylesheet"' />
 </head>
