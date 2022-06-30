@@ -81,12 +81,13 @@ h6 { font-size: 1em }
 }
 
 code, pre {
-  font-family: $font-special;
+  font-family: $font-mono;
+  font-size: 19px;
 }
 
 code {
   white-space: pre-wrap;
-  color: $color-primary;
+  color: $color-secondary;
 }
 
 pre {
