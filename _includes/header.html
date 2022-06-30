@@ -2,10 +2,10 @@
   {% include head/meta.html %}
   {% include head/common.html %}
   {% if page.collection == 'posts' %}
-  <link href="{{ 'assets/css/md.css' | relative_url }}" rel="stylesheet" />
+  <link href="{{ 'assets/css/md.css' | relative_url }}" rel="stylesheet" lazyload />
   {% else %}
-  <link href="{{ 'assets/css/grid.css' |  relative_url }}" rel="stylesheet" />
-  <link href="{{ 'assets/css/tab.css' |  relative_url }}" rel="stylesheet" />
+  <link href="{{ 'assets/css/grid.css' |  relative_url }}" rel="stylesheet" lazyload />
+  <link href="{{ 'assets/css/tab.css' |  relative_url }}" rel="stylesheet" lazyload />
   {% endif %}
-  <link href="{{ 'assets/css/style.css' |  relative_url }}" rel="stylesheet" />
+  <link href="{{ 'assets/css/style.css' |  relative_url }}" rel="stylesheet" lazyload />
 </head>
