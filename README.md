@@ -54,6 +54,7 @@ Field        | Example               | Description
 `writer`     | `J.R.R. Tolkien`      | Non-clickable writer's name (note no `_`)
 `color`      | `c5`                  | Values: `c1` .. `c10` (see [Card Colors]);
 `tags`       | `fantasy fiction`     | Alphanumeric words, use `-` to connect words
+`thumb`      | URL                   | Optional thumb image
 `image`      | URL                   | Optional main image
 `source`     | `The Tolkien Society` | Optional main source
 `source_url` | URL                   | Optional link to `source`
