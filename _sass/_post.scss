@@ -9,12 +9,19 @@ article {
   }
   h1 {
     margin-bottom: 0;
-    & + small {
+    & + time {
       color: var(--darkColor);
+      font-size: 16px;
     }
   }
-  h5, h5 a {
-    color: var(--tertiaryColor);
+  address {
+    font-style: normal;
+    font-family: var(--secondaryFont);
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    a {
+      color: var(--tertiaryColor);
+    }
   }
   .text > p:first-child {
     font-size: 25px;

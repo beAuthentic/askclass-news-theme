@@ -12,13 +12,15 @@
           {% endif %}
 
           <h1>{{ page.title }}</h1>
-          <small>{{ page.date | date: site.acn.date_format }}</small>
+          {% assign ymd = page.date | date: "%Y-%M-%D" %}
+          {% assign date = page.date | date: site.acn.date_format %}
+          <time pubdate datetime="{{ ymd }}" title="{{ date }}">{{ date }}</time>
 
           {% include writer.html info=page %}
           {% if writer_url %}
-            <h5><a href="{{ writer_url }}">{{ writer }}</a></h5>
+            <address><a rel="author" href="{{ writer_url }}">{{ writer }}</a></address>
           {% else %}
-            <h5>{{ writer }}</h5>
+            <address rel="author">{{ writer }}</address>
           {% endif %}
         </header>
 

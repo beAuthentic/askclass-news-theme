@@ -7,7 +7,7 @@ image: https://i.imgur.com/DMrjeFl.png
 source: GitHub
 source_url: https://github.blog/2022-05-19-math-support-in-markdown/
 ---
-$$ AskClass + Equations = Pretty $$
+$$ AskClass + EQ = ❤️ $$
 <!--more-->
 
 Math doesn't have to be hard.
