@@ -22,8 +22,8 @@ Key     | Max width | Description
 
 ## Using Imgur
 
-If you use Imgur to host your images, dd an `m` before the `.png`
-for your `thumb` value.  For `image` add an `l`.
+If you use Imgur to host your images, add an `m` before the `.png`
+for your `thumb` value. For `image` add an `l`.
 
 Key     | Value
 :---    | :---
